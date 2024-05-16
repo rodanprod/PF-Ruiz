@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: rgb(46, 46, 46);
+    position: relative;
+    z-index: 10; /* Asegura que el navbar esté sobre la imagen y otros elementos */
+}
+
+.navbar-brand {
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-bottom: 25px;
+}
+
+.nav-link {
+    color: white !important;
+    padding: 29px;
+}
+
+.collapse {
+    display: flex;
+    justify-content: flex-end;
+}
