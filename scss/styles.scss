@@ -7,7 +7,8 @@
 .navbar {
     background-color: rgb(46, 46, 46);
     position: relative;
-    z-index: 10; /* Asegura que el navbar esté sobre la imagen y otros elementos */
+    z-index: 10;
+    /* Asegura que el navbar esté sobre la imagen y otros elementos */
 }
 
 .navbar-brand {
@@ -43,14 +44,17 @@
     font-weight: 100;
     font-style: normal;
     font-size: 24px;
-    color: rgb(143, 143, 143); /* Color gris ajustado */
+    color: rgb(143, 143, 143);
+    /* Color gris ajustado */
     position: absolute;
-    top: 10%; /* Más arriba sobre los otros textos */
+    top: 10%;
+    /* Más arriba sobre los otros textos */
     left: 120px;
     width: 50%;
     opacity: 0;
     animation: fadeInDown 1s ease-out forwards;
-    z-index: 1; /* Por encima del texto de fondo, pero debajo de h1 */
+    z-index: 1;
+    /* Por encima del texto de fondo, pero debajo de h1 */
 }
 
 .trabaja {
@@ -88,20 +92,20 @@ h1 span {
     color: salmon;
 }
 
-.image-container {
+.image-container1 {
     position: absolute;
-    top: 100px;
+    top: 2px;
     right: 0;
     width: 50%;
-    height: 100%;
+    height: auto; // Asegúrate de que la altura se ajusta al contenido para evitar sobreposiciones indeseadas
     overflow: hidden;
     transform: rotate(0deg);
     animation: fadeInAndRotate 2s ease-out forwards;
     will-change: transform, opacity;
-    z-index: 0; /* Detrás del navbar */
+    z-index: -1; // Asegura que la imagen quede detrás del texto y otros elementos interactivos
 }
 
-.image-container img {
+.image-container1 img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease-out;
@@ -109,50 +113,58 @@ h1 span {
 
 .button-container {
     display: flex;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     margin-left: 30%;
     margin-top: 15%;
 }
 
 .call-action {
-    padding: 12px 24px; 
-    font-size: 18px; 
+    padding: 12px 24px;
+    font-size: 18px;
     color: #ffffff;
-    background-color: #636363; 
-    border: none; 
-    border-radius: 5px; 
+    background-color: #636363;
+    border: none;
+    border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s; 
+    transition: background-color 0.3s;
 }
 
 .call-action:hover {
-    background-color: #313131; 
+    background-color: #313131;
 }
 
-h2{
-    text-align: center;
+h2 {
+    text-align: start;
     background-color: rgb(40, 114, 89);
     padding: 20px;
-    color: #fff;
+    color: #fff !important;
     text-shadow: 0 0 5px #000;
+    margin-block-end: 0px !important;
 }
 
-h3{
+h3 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-style: normal;
 }
-.nright{
+
+.nleft{
+    background-image: url(/assets/img/background/hand\ final.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.nright {
     font-size: 20px;
 }
 
-.jumbotron{
+.jumbotron {
     background-image: url(/assets/img/Background/Mar.jpeg);
     background-size: cover;
     height: 500px;
 }
 
-h6{
+h6 {
     text-align: start;
     font-size: 40px;
     padding: 20px;
@@ -160,11 +172,107 @@ h6{
     text-shadow: 0 0 5px #000;
 }
 
-.p-5{
+.p-5 {
     font-size: 20px;
     padding-left: 0;
 }
 
+h2{
+    background-image: url(/assets/img/background/Mar.jpeg);
+}
+
+.container
+
+.form input,
+.form button {
+    border-radius: 10px; // Ajusta esto al tamaño de curvatura que prefieras
+    border: 1px solid #ccc; // Añade un borde sutil si es necesario
+    padding: 10px; // Asegúrate de que los campos tengan un padding adecuado para el diseño
+}
+
+.form input[type="radio"] {
+    border-radius: 50%; // Los botones de radio pueden ser totalmente redondos
+}
+
+.form button {
+    background-color: #636363; // Color de fondo para el botón
+    color: white; // Texto blanco para contraste
+    padding: 12px 20px; // Padding más generoso para el botón
+    cursor: pointer; // Cursor de mano al pasar el mouse
+    transition: background-color 0.3s; // Suaviza la transición del color de fondo
+
+    &:hover {
+        background-color: #313131; // Oscurece el botón al pasar el mouse
+    }
+}
+
+
+
+.col-sm-4 {
+    background-color: #707070; // Gris claro de fondo
+    border-radius: 15px; // Bordes redondeados
+    color: white; // Texto en blanco
+    text-align: center; // Texto centrado
+    padding: 20px; // Padding general
+    margin-bottom: 20px; // Margen entre artículos
+    
+    transition: background-color 0.3s; // Transición suave del fondo
+
+    i {
+        font-size: 40px; // Icono grande
+        margin-bottom: 10px; // Espacio entre icono y texto
+    }
+
+    &:hover {
+        background-color: #353535; // Gris más oscuro en hover
+    }
+}
+
+.form {
+    input, textarea, select, button {
+        display: block; // Asegura que cada campo ocupe su propia línea
+        width: 25%; // Ocupa todo el ancho disponible
+        margin-bottom: 3px; // Espacio vertical entre campos
+
+        &:last-child {
+            margin-bottom: 100px; // Remueve el margen del último elemento para evitar espacio extra al final
+        }
+        
+    }
+}
+
+.form {
+    // Estilo para las etiquetas de los radio buttons
+    label {
+        display: block;
+        margin-bottom: 5px; // Espacio debajo de cada etiqueta de sección
+    }
+
+    .radio-group {
+        display: flex;
+        align-items: center; // Alinea los elementos verticalmente
+        margin-bottom: 20px; // Espacio debajo del grupo de radio buttons
+
+        input[type="radio"] {
+            margin-right: 10px; // Espacio a la derecha del radio button
+        }
+
+        label {
+            display: inline-block; // Permite que la etiqueta esté en la misma línea que el radio
+            margin: 0; // Elimina el margen por defecto de las etiquetas
+        }
+    }
+}
+
+
+// Estilos adicionales para mejorar la responsividad y la accesibilidad
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .form input,
+    .form button {
+        width: auto; // Asegura que los elementos del formulario se adapten al tamaño del dispositivo
+    }
+}
 
 
 @keyframes fadeInDown {
@@ -172,6 +280,7 @@ h6{
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -183,14 +292,35 @@ h6{
         opacity: 0;
         transform: rotate(5deg);
     }
+
     100% {
         opacity: 1;
         transform: rotate(0deg);
     }
 }
 
+.signin {
+    color: #4e4e4e;
+    background-color: rgb(39, 25, 25);
+    text-align: center;
+    font-size: 35px;
+    padding-bottom: 30px;
+}
 
-footer{
+
+.signin a {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 40px;
+    padding-bottom: 100px;
+}
+
+.signin a:hover {
+    color: rgb(119, 119, 119);
+}
+
+footer {
     color: #fff;
     background-color: salmon;
     text-align: center;
@@ -199,15 +329,68 @@ footer{
 }
 
 
-footer a{
+footer a {
     font-size: 60px;
     color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 40px;
 }
 
-footer a:hover{
+footer a:hover {
     color: rgb(46, 126, 98);
+}
+
+.divider{
+    padding: 300px;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    font-size: 2rem;
+}
+
+.text3 {
+    background-color: #f4f4f4; // Fondo claro para las tarjetas
+    border-radius: 10px; // Bordes redondeados
+    padding: 20px; // Espacio interno
+    margin: 20px auto; // Centrado con margen vertical
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); // Sombra sutil
+    width: 80%; // Ancho de las tarjetas
+    transition: transform 0.3s ease, box-shadow 0.3s ease; // Transiciones para el efecto al pasar el ratón
+
+    &:hover {
+        transform: translateY(-5px); // Eleva la tarjeta
+        box-shadow: 0 12px 16px rgba(0,0,0,0.2); // Sombra más pronunciada
+    }
+}
+
+.title3 {
+    color: #5a5a5a; // Color del título de la sección de descarga
+    font-size: 1.5rem; // Tamaño del título
+}
+
+.download-button {
+    display: block; // Hace que el botón ocupe su propia línea
+    width: auto; // Ancho automático dentro de su contenedor
+    padding: 10px 20px; // Padding del botón
+    text-align: center; // Centrado del texto dentro del botón
+    background-color: #007bff; // Color de fondo del botón
+    color: white; // Color de texto del botón
+    border-radius: 5px; // Bordes redondeados del botón
+    text-decoration: none; // Elimina el subrayado de los enlaces
+    margin-top: 10px; // Margen superior para separar del texto
+
+    &:hover {
+        background-color: #0056b3; // Color al pasar el ratón
+    }
+}
+
+@media (max-width: 768px) {
+    .text3 {
+        width: 90%; // Ancho más amplio para dispositivos pequeños
+    }
 }
 
 /* dispositivos moviles inicia */
@@ -215,52 +398,116 @@ footer a:hover{
 @media (min-width: 375px) and (max-width: 768px) {
 
     .image-container {
-        position: absolute; /* Cambia la posición a relativa para que fluya con el contenido */
-        width: 100%; /* Ocupa todo el ancho */
-        height: auto; /* Altura automática para mostrar la imagen completa */
-        top: 0; /* Ajusta la posición superior */
-        order: -1; /* Coloca la imagen sobre el texto en el flujo del documento */
-        z-index: 1; /* Asegúrate de que esté sobre los elementos de texto */
+        position: absolute;
+        /* Cambia la posición a relativa para que fluya con el contenido */
+        width: 100%;
+        /* Ocupa todo el ancho */
+        height: auto;
+        /* Altura automática para mostrar la imagen completa */
+        top: 0;
+        /* Ajusta la posición superior */
+        order: -1;
+        /* Coloca la imagen sobre el texto en el flujo del documento */
+        z-index: 1;
+        /* Asegúrate de que esté sobre los elementos de texto */
     }
 
     .section {
-        flex-direction: column; /* Cambia la dirección del flex a columna */
-        height: auto; /* Ajusta la altura basada en el contenido */
+        flex-direction: column;
+        /* Cambia la dirección del flex a columna */
+        height: auto;
+        /* Ajusta la altura basada en el contenido */
     }
 
-    .small-text, .trabaja, h1{
-        width: 100%; /* Asegura que los textos ocupen todo el ancho */
-        text-align: center; /* Alinea el texto a la izquierda */
-        left: 0; /* Elimina cualquier desplazamiento lateral */
-        position: relative; /* Posicionamiento relativo para una mejor fluidez */
-        order: 1; /* Asegura que el texto venga después de la imagen */
-        top: 2px !important; /* Elimina cualquier ajuste de posición superior específico */
+    .small-text,
+    .trabaja,
+    h1 {
+        width: 100%;
+        /* Asegura que los textos ocupen todo el ancho */
+        text-align: center;
+        /* Alinea el texto a la izquierda */
+        left: 0;
+        /* Elimina cualquier desplazamiento lateral */
+        position: relative;
+        /* Posicionamiento relativo para una mejor fluidez */
+        order: 1;
+        /* Asegura que el texto venga después de la imagen */
+        top: 2px !important;
+        /* Elimina cualquier ajuste de posición superior específico */
     }
 
     .small-text {
-        font-size: 1rem; /* Ajusta el tamaño de fuente para mejor legibilidad */
+        font-size: 1rem;
+        /* Ajusta el tamaño de fuente para mejor legibilidad */
         top: 170px !important;
         padding: 24px;
     }
 
     .trabaja {
-        font-size: 1.5rem; /* Ajusta el tamaño de fuente para coherencia */
+        font-size: 1.5rem;
+        /* Ajusta el tamaño de fuente para coherencia */
         top: 250px !important;
     }
 
     h1 {
-        font-size: 1.8rem; /* Ajusta el tamaño de la fuente del h1 para visibilidad */
+        font-size: 1.8rem;
+        /* Ajusta el tamaño de la fuente del h1 para visibilidad */
         top: 60px !important;
     }
 
-    .button-container{
+    .button-container {
         display: flex;
         position: absolute;
         align-items: center;
-        justify-content: space-around; 
+        justify-content: space-around;
         margin-left: 36%;
         margin-top: 100%;
 
+    }
+}
+
+.form2 {
+    background-color: #f9f9f9;  // Un fondo claro para el formulario
+    padding: 30px;             // Padding para dar espacio dentro del formulario
+    border-radius: 15px;       // Bordes redondeados
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);  // Sombra sutil para dar profundidad
+    width: 50%;                // Ancho del formulario
+    margin: 20px auto;         // Centrar el formulario horizontalmente con un margen vertical
+}
+
+.input2, .textarea2 {
+    width: calc(100% - 20px);  // Ancho total menos el padding
+    padding: 10px;             // Padding para los inputs
+    margin-bottom: 15px;       // Margen entre los inputs
+    border: 1px solid #ccc;    // Borde sutil
+    border-radius: 10px;       // Bordes redondeados para los inputs
+    box-sizing: border-box;    // Asegura que el padding no afecte el ancho final
+}
+
+.textarea2 {
+    height: 150px;             // Altura específica para el textarea
+    resize: none;              // Evita que el usuario redimensione el textarea
+}
+
+.button2 {
+    width: 100%;               // El botón ocupa todo el ancho del formulario
+    padding: 10px;             // Padding cómodo para el botón
+    border-radius: 10px;       // Bordes redondeados para el botón
+    border: none;              // Sin borde
+    background-color: #636363; // Color de fondo del botón
+    color: white;              // Color del texto del botón
+    font-size: 16px;           // Tamaño del texto
+    cursor: pointer;           // Cursor de puntero para indicar que es clickeable
+    transition: background-color 0.3s;  // Transición suave del color de fondo
+
+    &:hover {
+        background-color: #313131;  // Oscurece el botón al pasar el mouse
+    }
+}
+
+@media (max-width: 768px) {
+    .form2 {
+        width: 90%;  // Más ancho en dispositivos pequeños para aprovechar mejor el espacio
     }
 }
 
@@ -283,23 +530,28 @@ footer a:hover{
         height: auto;
     }
 
-    .small-text, .trabaja {
+    .small-text,
+    .trabaja {
         width: 100%;
         text-align: center;
         left: 0;
         position: relative;
         order: 1;
-        padding: 20px; /* Ajustado para tablets */
+        padding: 20px;
+        /* Ajustado para tablets */
     }
 
     .small-text {
-        font-size: 1.2rem; /* Ligeramente más grande para tablets */
-        top: px !important; /* Ajuste según sea necesario */
+        font-size: 1.2rem;
+        /* Ligeramente más grande para tablets */
+        top: px !important;
+        /* Ajuste según sea necesario */
     }
 
     .trabaja {
         position: relative;
-        font-size: 3rem; /* Más grande para una mejor legibilidad en tablets */
+        font-size: 3rem;
+        /* Más grande para una mejor legibilidad en tablets */
         margin-top: 30px;
     }
 
@@ -307,23 +559,31 @@ footer a:hover{
         position: relative;
         text-align: start;
         margin-top: 400px;
-        font-size: 3rem; /* Ajusta el tamaño para tablets */
+        font-size: 3rem;
+        /* Ajusta el tamaño para tablets */
     }
 
     .button-container {
         display: flex;
         position: absolute;
         align-items: center;
-        justify-content: center; /* Centrado del botón */
-        width: 100%; /* Usa todo el ancho disponible */
-        margin-top: 15%; /* Ajusta según la disposición del contenido */
+        justify-content: center;
+        /* Centrado del botón */
+        width: 100%;
+        /* Usa todo el ancho disponible */
+        margin-top: 15%;
+        /* Ajusta según la disposición del contenido */
     }
 
     .download-button {
-        padding: 10px 20px; /* Tamaño ajustado para tablets */
-        font-size: 16px; /* Ligeramente más pequeño para ajustar a la interfaz */
-        margin: 0 auto; /* Centra el botón horizontalmente */
-        max-width: 200px; /* Límite del ancho del botón para mantener la estética */
+        padding: 10px 20px;
+        /* Tamaño ajustado para tablets */
+        font-size: 16px;
+        /* Ligeramente más pequeño para ajustar a la interfaz */
+        margin: 0 auto;
+        /* Centra el botón horizontalmente */
+        max-width: 200px;
+        /* Límite del ancho del botón para mantener la estética */
     }
 }
 

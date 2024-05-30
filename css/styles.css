@@ -8,7 +8,8 @@
 .navbar {
   background-color: rgb(46, 46, 46);
   position: relative;
-  z-index: 10; /* Asegura que el navbar esté sobre la imagen y otros elementos */
+  z-index: 10;
+  /* Asegura que el navbar esté sobre la imagen y otros elementos */
 }
 
 .navbar-brand {
@@ -44,14 +45,17 @@
   font-weight: 100;
   font-style: normal;
   font-size: 24px;
-  color: rgb(143, 143, 143); /* Color gris ajustado */
+  color: rgb(143, 143, 143);
+  /* Color gris ajustado */
   position: absolute;
-  top: 10%; /* Más arriba sobre los otros textos */
+  top: 10%;
+  /* Más arriba sobre los otros textos */
   left: 120px;
   width: 50%;
   opacity: 0;
   animation: fadeInDown 1s ease-out forwards;
-  z-index: 1; /* Por encima del texto de fondo, pero debajo de h1 */
+  z-index: 1;
+  /* Por encima del texto de fondo, pero debajo de h1 */
 }
 
 .trabaja {
@@ -89,20 +93,20 @@ h1 span {
   color: salmon;
 }
 
-.image-container {
+.image-container1 {
   position: absolute;
-  top: 100px;
+  top: 2px;
   right: 0;
   width: 50%;
-  height: 100%;
+  height: auto;
   overflow: hidden;
   transform: rotate(0deg);
   animation: fadeInAndRotate 2s ease-out forwards;
   will-change: transform, opacity;
-  z-index: 0; /* Detrás del navbar */
+  z-index: -1;
 }
 
-.image-container img {
+.image-container1 img {
   width: 100%;
   height: auto;
   transition: transform 0.3s ease-out;
@@ -131,17 +135,24 @@ h1 span {
 }
 
 h2 {
-  text-align: center;
+  text-align: start;
   background-color: rgb(40, 114, 89);
   padding: 20px;
-  color: #fff;
+  color: #fff !important;
   text-shadow: 0 0 5px #000;
+  margin-block-end: 0px !important;
 }
 
 h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+
+.nleft {
+  background-image: url(/assets/img/background/hand\ final.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .nright {
@@ -167,6 +178,81 @@ h6 {
   padding-left: 0;
 }
 
+h2 {
+  background-image: url(/assets/img/background/Mar.jpeg);
+}
+
+.container .form input,
+.form button {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.form input[type=radio] {
+  border-radius: 50%;
+}
+
+.form button {
+  background-color: #636363;
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.form button:hover {
+  background-color: #313131;
+}
+
+.col-sm-4 {
+  background-color: #707070;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+.col-sm-4 i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.col-sm-4:hover {
+  background-color: #353535;
+}
+
+.form input, .form textarea, .form select, .form button {
+  display: block;
+  width: 25%;
+  margin-bottom: 3px;
+}
+.form input:last-child, .form textarea:last-child, .form select:last-child, .form button:last-child {
+  margin-bottom: 100px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form .radio-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.form .radio-group input[type=radio] {
+  margin-right: 10px;
+}
+.form .radio-group label {
+  display: inline-block;
+  margin: 0;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .form input,
+  .form button {
+    width: auto;
+  }
+}
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -187,6 +273,26 @@ h6 {
     transform: rotate(0deg);
   }
 }
+.signin {
+  color: #4e4e4e;
+  background-color: rgb(39, 25, 25);
+  text-align: center;
+  font-size: 35px;
+  padding-bottom: 30px;
+}
+
+.signin a {
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 40px;
+  padding-bottom: 100px;
+}
+
+.signin a:hover {
+  color: rgb(119, 119, 119);
+}
+
 footer {
   color: #fff;
   background-color: salmon;
@@ -206,39 +312,108 @@ footer a:hover {
   color: rgb(46, 126, 98);
 }
 
+.divider {
+  padding: 300px;
+}
+
+.title {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+  font-size: 2rem;
+}
+
+.text3 {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.text3:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.title3 {
+  color: #5a5a5a;
+  font-size: 1.5rem;
+}
+
+.download-button {
+  display: block;
+  width: auto;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+.download-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .text3 {
+    width: 90%;
+  }
+}
 /* dispositivos moviles inicia */
 @media (min-width: 375px) and (max-width: 768px) {
   .image-container {
-    position: absolute; /* Cambia la posición a relativa para que fluya con el contenido */
-    width: 100%; /* Ocupa todo el ancho */
-    height: auto; /* Altura automática para mostrar la imagen completa */
-    top: 0; /* Ajusta la posición superior */
-    order: -1; /* Coloca la imagen sobre el texto en el flujo del documento */
-    z-index: 1; /* Asegúrate de que esté sobre los elementos de texto */
+    position: absolute;
+    /* Cambia la posición a relativa para que fluya con el contenido */
+    width: 100%;
+    /* Ocupa todo el ancho */
+    height: auto;
+    /* Altura automática para mostrar la imagen completa */
+    top: 0;
+    /* Ajusta la posición superior */
+    order: -1;
+    /* Coloca la imagen sobre el texto en el flujo del documento */
+    z-index: 1;
+    /* Asegúrate de que esté sobre los elementos de texto */
   }
   .section {
-    flex-direction: column; /* Cambia la dirección del flex a columna */
-    height: auto; /* Ajusta la altura basada en el contenido */
+    flex-direction: column;
+    /* Cambia la dirección del flex a columna */
+    height: auto;
+    /* Ajusta la altura basada en el contenido */
   }
-  .small-text, .trabaja, h1 {
-    width: 100%; /* Asegura que los textos ocupen todo el ancho */
-    text-align: center; /* Alinea el texto a la izquierda */
-    left: 0; /* Elimina cualquier desplazamiento lateral */
-    position: relative; /* Posicionamiento relativo para una mejor fluidez */
-    order: 1; /* Asegura que el texto venga después de la imagen */
-    top: 2px !important; /* Elimina cualquier ajuste de posición superior específico */
+  .small-text,
+  .trabaja,
+  h1 {
+    width: 100%;
+    /* Asegura que los textos ocupen todo el ancho */
+    text-align: center;
+    /* Alinea el texto a la izquierda */
+    left: 0;
+    /* Elimina cualquier desplazamiento lateral */
+    position: relative;
+    /* Posicionamiento relativo para una mejor fluidez */
+    order: 1;
+    /* Asegura que el texto venga después de la imagen */
+    top: 2px !important;
+    /* Elimina cualquier ajuste de posición superior específico */
   }
   .small-text {
-    font-size: 1rem; /* Ajusta el tamaño de fuente para mejor legibilidad */
+    font-size: 1rem;
+    /* Ajusta el tamaño de fuente para mejor legibilidad */
     top: 170px !important;
     padding: 24px;
   }
   .trabaja {
-    font-size: 1.5rem; /* Ajusta el tamaño de fuente para coherencia */
+    font-size: 1.5rem;
+    /* Ajusta el tamaño de fuente para coherencia */
     top: 250px !important;
   }
   h1 {
-    font-size: 1.8rem; /* Ajusta el tamaño de la fuente del h1 para visibilidad */
+    font-size: 1.8rem;
+    /* Ajusta el tamaño de la fuente del h1 para visibilidad */
     top: 60px !important;
   }
   .button-container {
@@ -248,6 +423,49 @@ footer a:hover {
     justify-content: space-around;
     margin-left: 36%;
     margin-top: 100%;
+  }
+}
+.form2 {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  margin: 20px auto;
+}
+
+.input2, .textarea2 {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.textarea2 {
+  height: 150px;
+  resize: none;
+}
+
+.button2 {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #636363;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.button2:hover {
+  background-color: #313131;
+}
+
+@media (max-width: 768px) {
+  .form2 {
+    width: 90%;
   }
 }
 /* dispositivos moviles fin*/
@@ -265,42 +483,55 @@ footer a:hover {
     flex-direction: column;
     height: auto;
   }
-  .small-text, .trabaja {
+  .small-text,
+  .trabaja {
     width: 100%;
     text-align: center;
     left: 0;
     position: relative;
     order: 1;
-    padding: 20px; /* Ajustado para tablets */
+    padding: 20px;
+    /* Ajustado para tablets */
   }
   .small-text {
-    font-size: 1.2rem; /* Ligeramente más grande para tablets */
-    top: px !important; /* Ajuste según sea necesario */
+    font-size: 1.2rem;
+    /* Ligeramente más grande para tablets */
+    top: px !important;
+    /* Ajuste según sea necesario */
   }
   .trabaja {
     position: relative;
-    font-size: 3rem; /* Más grande para una mejor legibilidad en tablets */
+    font-size: 3rem;
+    /* Más grande para una mejor legibilidad en tablets */
     margin-top: 30px;
   }
   h1 {
     position: relative;
     text-align: start;
     margin-top: 400px;
-    font-size: 3rem; /* Ajusta el tamaño para tablets */
+    font-size: 3rem;
+    /* Ajusta el tamaño para tablets */
   }
   .button-container {
     display: flex;
     position: absolute;
     align-items: center;
-    justify-content: center; /* Centrado del botón */
-    width: 100%; /* Usa todo el ancho disponible */
-    margin-top: 15%; /* Ajusta según la disposición del contenido */
+    justify-content: center;
+    /* Centrado del botón */
+    width: 100%;
+    /* Usa todo el ancho disponible */
+    margin-top: 15%;
+    /* Ajusta según la disposición del contenido */
   }
   .download-button {
-    padding: 10px 20px; /* Tamaño ajustado para tablets */
-    font-size: 16px; /* Ligeramente más pequeño para ajustar a la interfaz */
-    margin: 0 auto; /* Centra el botón horizontalmente */
-    max-width: 200px; /* Límite del ancho del botón para mantener la estética */
+    padding: 10px 20px;
+    /* Tamaño ajustado para tablets */
+    font-size: 16px;
+    /* Ligeramente más pequeño para ajustar a la interfaz */
+    margin: 0 auto;
+    /* Centra el botón horizontalmente */
+    max-width: 200px;
+    /* Límite del ancho del botón para mantener la estética */
   }
 }
 /* tablets fin*/
